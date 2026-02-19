@@ -35,7 +35,7 @@ if st.button("Gerar Insights"):
             "budget": budget
         }
         try:
-            response = requests.post("http://127.0.0.1:8000/generate-insight", json=payload)
+            response = requests.post("https://live-like-a-local.onrender.com/generate-insight", json=payload)
             if response.status_code == 200:
                 data = response.json()
 
