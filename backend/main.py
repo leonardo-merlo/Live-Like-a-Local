@@ -18,6 +18,10 @@ app.include_router(insight_router, prefix="")
 def health():
     return {"status": "ok"}
 
+@app.head("/health")
+def health_head():
+    return {}
+
 if __name__ == "__main__":
     import uvicorn
     PORT = int(os.environ.get("PORT", 8000))
